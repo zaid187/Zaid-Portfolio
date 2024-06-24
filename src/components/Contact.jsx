@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios';
 
 const Contact = () => {
   const formik = useFormik({
@@ -21,22 +22,14 @@ const Contact = () => {
         .required('Your Message is Required*'),
     }),
     onSubmit: values => {
-      fetch('https://getform.io/f/nbvvgwlb', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
-      }).then(response => {
-        if (response.ok) {
+      axios.post('http://localhost:3000/api/contact', values)
+        .then(response => {
           alert('Message sent successfully');
-        } else {
+        })
+        .catch(error => {
+          console.error('There was an error!', error);
           alert('Failed to send message');
-        }
-      }).catch(error => {
-        console.error('Error:', error);
-        alert('Failed to send message');
-      });
+        });
     },
   });
 
