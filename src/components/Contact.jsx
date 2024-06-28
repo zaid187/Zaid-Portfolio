@@ -22,7 +22,7 @@ const Contact = () => {
         .required('Your Message is Required*'),
     }),
     onSubmit: values => {
-      axios.post('http://localhost:3000/api/contact', values)
+      axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, values)
         .then(response => {
           alert('Message sent successfully');
         })
