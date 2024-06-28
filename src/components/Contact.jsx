@@ -22,7 +22,7 @@ const Contact = () => {
         .required('Your Message is Required*'),
     }),
     onSubmit: values => {
-      axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, values)
+      axios.post('https://zaid-portfolio.onrender.com/api/contact', values)
         .then(response => {
           alert('Message sent successfully');
         })
