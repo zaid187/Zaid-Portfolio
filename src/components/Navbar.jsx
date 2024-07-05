@@ -26,10 +26,22 @@ const Navbar = () => {
                              : 'fixed left-[-100%]'}>
     <h1 className='text-3xl primary-color m-4'>Zaid Kazi</h1>
     <ul className='p-8 text-2xl'> 
-     <li className='p-2'><a href='#about'>About</a></li>
-     <li className='p-2'><a href='#work'>Work</a></li>
-     <li className='p-2'><a href='#contact'>Contact</a></li>
-    </ul>
+     <li className='p-2'>
+     <a href='#about' style={{ color: '#cd5c5c' }}>
+            About
+            </a>
+            </li>
+     <li className='p-2'>
+     <a href='#work' style={{ color: '#cd5c5c' }}>
+            Work
+            </a>
+            </li>
+     <li className='p-2'>
+     <a href='#contact' style={{ color: '#cd5c5c' }}>
+            Contact
+            </a>
+            </li>
+         </ul>
          </div>
     </div>
     
