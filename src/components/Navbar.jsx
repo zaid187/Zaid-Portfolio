@@ -13,9 +13,21 @@ const Navbar = () => {
         <div className='h-[100px] max-w-[1200px] mx-auto flex justify-between items-center'>
             <h1 className='text-3xl font-bold primary-color ml-4'>Zaid Kazi</h1>
             <ul className='hidden md:flex'>
-                <li className='p-5'><a href='#about'>About</a></li>
-                <li className='p-5'><a href='#work'>Work</a></li>
-                <li className='p-5'><a href='#contact'>Contact</a></li>
+                <li className='p-5'>
+                <a href='#about' style={{ color: '#cd5c5c' }}>
+                        About
+                        </a>
+                        </li>
+                <li className='p-5'>
+                <a href='#work' style={{ color: '#cd5c5c' }}>
+                        Work
+                        </a>
+                        </li>
+                <li className='p-5'>
+                <a href='#contact' style={{ color: '#cd5c5c' }}>
+                        Contact
+                        </a>
+                        </li>
             </ul>
             <li><DarkMode /></li>
     <div onClick={handleNav} className='block md:hidden mr-6'>
