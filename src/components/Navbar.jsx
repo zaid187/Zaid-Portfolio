@@ -14,20 +14,14 @@ const Navbar = () => {
             <h1 className='text-3xl font-bold primary-color ml-4'>Zaid Kazi</h1>
             <ul className='hidden md:flex'>
                 <li className='p-5'>
-                <a href='#about' style={{ color: '#cd5c5c' }}>
-                        About
-                        </a>
-                        </li>
+                <a href='#about' className='text-black dark:text-[#cd5c5c]'>About</a>
+                </li>
                 <li className='p-5'>
-                <a href='#work' style={{ color: '#cd5c5c' }}>
-                        Work
-                        </a>
-                        </li>
+                <a href='#work' className='text-black dark:text-[#cd5c5c]'>Work</a>
+                </li>
                 <li className='p-5'>
-                <a href='#contact' style={{ color: '#cd5c5c' }}>
-                        Contact
-                        </a>
-                        </li>
+                <a href='#contact' className='text-black dark:text-[#cd5c5c]'>Contact</a>
+                </li>
             </ul>
             <li><DarkMode /></li>
     <div onClick={handleNav} className='block md:hidden mr-6'>
@@ -39,20 +33,14 @@ const Navbar = () => {
     <h1 className='text-3xl primary-color m-4'>Zaid Kazi</h1>
     <ul className='p-8 text-2xl'> 
      <li className='p-2'>
-     <a href='#about' style={{ color: '#cd5c5c' }}>
-            About
-            </a>
-            </li>
+     <a href='#about' className='text-black dark:text-[#cd5c5c]'>About</a>
+     </li>
      <li className='p-2'>
-     <a href='#work' style={{ color: '#cd5c5c' }}>
-            Work
-            </a>
-            </li>
+     <a href='#work' className='text-black dark:text-[#cd5c5c]'>Work</a>
+     </li>
      <li className='p-2'>
-     <a href='#contact' style={{ color: '#cd5c5c' }}>
-            Contact
-            </a>
-            </li>
+     <a href='#contact' className='text-black dark:text-[#cd5c5c]'>Contact</a>
+     </li>
          </ul>
          </div>
     </div>
