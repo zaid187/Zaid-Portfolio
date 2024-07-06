@@ -1,6 +1,6 @@
 import React from 'react'
 import proj1 from '../assets/proj1.jpg'
-
+import proj3 from '../assets/proj3.jpg'
 
 const Work = () => {
   return (
@@ -34,7 +34,7 @@ const Work = () => {
      <div className='transform transition-tranform duration-300 hover:scale-105 overflow-hidden
                      shadow-lg shadow-[#040c16] group rounded-md flex justify-center items-center
                      h-[200px] bg-cover relative'>
-         <img src={proj2}  alt="" />
+         <img src={proj3}  alt="" />
          <div className='opacity-0 group-hover:opacity-90 bg-[gray]/70 absolute inset-0 flex flex-col
                          justify-center items-center'>
              <span className='text-2xl font-bold text-white tracking-wider'>Project</span>
