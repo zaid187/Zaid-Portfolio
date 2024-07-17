@@ -46,7 +46,7 @@
   "description": "",
   "main": "index.cjs",
   "engines": {
-    "node": "18.16.0",
+    "node": ">=20.14.0",
     "yarn": ">=1.22.0"
   }
 }
