@@ -1,0 +1,5 @@
+{
+    "mongoURI": "mongodb+srv://zaidkazi1267:bGSYjReQFQHW1bYQ@cluster0.keajooy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "jwtSecret": "66aafe3725f3f1627321edf7c8fa9f94163430b222e100bdd989faa951e22d91"
+  }
+  
