@@ -9,7 +9,6 @@ import Skills from "./components/Skills";
 import Work from "./components/Work";
 import Blog from "./components/Blog";
 import BlogPost from "./components/BlogPost";
-import BlogList from "./components/BlogList";
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
-          <Route path="/bloglist" element={<BlogList />} />
         </Routes>
         <Footer />
       </div>
