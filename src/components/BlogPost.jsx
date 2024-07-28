@@ -1,45 +1,34 @@
 // src/components/BlogPost.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import CommentForm from './CommentForm';
 
 const BlogPost = () => {
-  const { id } = useParams();
-  const [post, setPost] = useState({});
-  const [comments, setComments] = useState([]);
+    const { id } = useParams();
+    const [post, setPost] = useState(null);
 
-  useEffect(() => {
-    const fetchPost = async () => {
-      const res = await axios.get(`/api/blog/${id}`);
-      setPost(res.data);
-      setComments(res.data.comments);
-    };
-    fetchPost();
-  }, [id]);
+    useEffect(() => {
+        // Fetch the blog post from the backend
+        axios.get(`/api/blog/${id}`)
+            .then(response => {
+                setPost(response.data);
+            })
+            .catch(error => {
+                console.error('There was an error fetching the blog post!', error);
+            });
+    }, [id]);
 
-  const addComment = async (comment) => {
-    const res = await axios.post(`/api/blog/${id}/comments`, comment);
-    setComments(res.data.comments);
-  };
+    if (!post) return <div>Loading...</div>;
 
-  return (
-    <div>
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
-      <p>{post.author}</p>
-      <p>{new Date(post.date).toLocaleDateString()}</p>
-      <h2>Comments</h2>
-      {comments.map(comment => (
-        <div key={comment._id}>
-          <p>{comment.text}</p>
-          <p>{comment.author}</p>
-          <p>{new Date(comment.date).toLocaleDateString()}</p>
+    return (
+        <div className="max-w-[1200px] mx-auto p-5">
+            <h2 className="text-4xl mb-3 font-bold">{post.title}</h2>
+            <p className="text-sm text-gray-600">By {post.author} on {new Date(post.date).toLocaleDateString()}</p>
+            <div className="mt-5">
+                {post.content}
+            </div>
         </div>
-      ))}
-      <CommentForm addComment={addComment} />
-    </div>
-  );
+    );
 };
 
 export default BlogPost;
