@@ -1,5 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/db'); // Correct path to db.js
+const cors = require('cors'); // Importing cors
 
 const app = express();
 
@@ -7,6 +8,7 @@ const app = express();
 connectDB();
 
 // Init Middleware
+app.use(cors()); // Enabling CORS
 app.use(express.json({ extended: false }));
 
 app.get('/', (req, res) => res.send('API Running'));
